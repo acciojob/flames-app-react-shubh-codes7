@@ -10,13 +10,13 @@ const App = () => {
     e.preventDefault();
 
     if (!name1 || !name2) {
-      setResult("Please enter both names");
+      setResult("Please Enter valid input");
       return;
     }
 
     // Example logic: Flames-like result based on name lengths
     const totalLength = name1.replace(/\s/g, "").length + name2.replace(/\s/g, "").length;
-    const outcomes = ["Friends", "Love", "Affection", "Marriage", "Enemies", "Soulmates"];
+    const outcomes = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enemy"];
     const relationship = outcomes[totalLength % outcomes.length];
 
     setResult(relationship);
